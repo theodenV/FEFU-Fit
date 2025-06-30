@@ -70,13 +70,13 @@ fun formatAgo(timeMs: Long): String {
     val minutes = TimeUnit.MILLISECONDS.toMinutes(timeDifference)
     val hours = TimeUnit.MILLISECONDS.toHours(timeDifference)
     val days = TimeUnit.MILLISECONDS.toDays(timeDifference)
-    return when {
-        days > 0 -> SimpleDateFormat("dd.MM.yyyy", Locale.getDefault()).format(Date(timeMs))
-        hours > 0 -> "$hours часов назад"
-        minutes > 0 -> "$minutes минут назад"
-        else -> "только что"
-    }
-}
+            return when {
+                days > 0 -> SimpleDateFormat("dd.MM.yyyy", Locale.getDefault()).format(Date(timeMs))
+                hours > 0 -> "$hours часов назад"
+                minutes > 0 -> "$minutes минут назад"
+                else -> "только что"
+            }
+        }
 
 fun formatDate(timeMs: Long): String {
     return SimpleDateFormat("dd.MM.yyyy HH:mm", Locale.getDefault()).format(Date(timeMs))

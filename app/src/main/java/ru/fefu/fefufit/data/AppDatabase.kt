@@ -9,7 +9,7 @@ import androidx.room.TypeConverters
 @Database(entities = [ActivityEntity::class], version = 1)
 @TypeConverters(Converters::class)
 abstract class AppDatabase : RoomDatabase() {
-    
+
     companion object {
         @Volatile private var databaseInstance: AppDatabase? = null
 
